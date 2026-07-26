@@ -41,9 +41,9 @@ The family's newest and largest generation, and its first **vision-language** mo
 
 Quick Start below gets you there in two commands: `./setup.sh` downloads Ternary-Bonsai-27B by default, then `./scripts/start_llama_server.sh` gives you chat, vision, and tools at http://localhost:8080.
 
-## Quick Start
+## クイック・スタート
 
-Setting things up with an AI coding agent? Point it at [AGENTS.md](AGENTS.md), a guide written for agents (hardware-specific knobs, defaults, and what to ask the user).
+AIコーディング・エージェントとしてのセットアップをご所望ですか？ (それなら)それに(エージェント向けに〈ハードウェアに特有のツマミ、既定値、そしてユーザに尋ねるべき内容が〉書かれたガイド)、[AGENTS.md](AGENTS.md)を指示・参照させてください。
 
 ### macOS / Linux
 
