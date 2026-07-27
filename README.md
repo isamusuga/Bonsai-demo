@@ -101,11 +101,11 @@ $env:BONSAI_FAMILY="ternary"; $env:BONSAI_MODEL="4B"
 
 種々のハードウェアにおける結果とあなたの測定結果の提出用テンプレートについては [community-benchmarks/](community-benchmarks/) を参照してください。
 
-## Models
+## モデル群
 
-Two model families are available, each in sizes **27B**, **8B**, **4B**, and **1.7B**. The 27B models are vision-language models: they accept images as well as text; all 27B repos are gathered in the [Bonsai 27B HF collection](https://huggingface.co/collections/prism-ml/bonsai-27b).
+２つのモデル・ファミリー群が利用可能であり, それぞれのサイズは**27B**, **8B**, **4B**, そして **1.7B**です。このうち27Bモデルは視覚言語モデルであり: それらは文書同様、画像を受け入れます; 全27Bリポは[Bonsai 27B HF コレクション](https://huggingface.co/collections/prism-ml/bonsai-27b)に集められてます。
 
-Both formats are landing in mainline llama.cpp: **Q1_0 (1-bit) is fully merged upstream**, and **Q2_0 (ternary) now runs on mainline CPU, Metal, and Vulkan**, with CUDA in review. Details and mainline-compatible files: [binary status](#upstream-status-for-binary) and [ternary status](#upstream-status-for-ternary) below.
+両形式ともllama.cppのメインラインに実装されつつあります: **Q1_0 (1-ビット版) は完全にアップストリームにマージされ**, そして **Q2_0 (ternary版) は現在はメインラインCPU、Metal、Vulkanで動作し**, CUDAについては現在レビュー中です。詳細およびメインライン互換ファイル: [binary版の現況](#upstream-status-for-binary) と [ternary版の現況](#upstream-status-for-ternary) は後述にて。
 
 ### Bonsai (1-bit)
 
