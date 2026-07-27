@@ -97,9 +97,9 @@ $env:BONSAI_FAMILY="ternary"; $env:BONSAI_MODEL="4B"
 
 ---
 
-## Speed Benchmarks
+## 速度ベンチマーク
 
-See [community-benchmarks/](community-benchmarks/) for results on different hardware and templates to submit your own.
+種々のハードウェアにおける結果とあなたの測定結果の提出用テンプレートについては [community-benchmarks/](community-benchmarks/) を参照してください。
 
 ## Models
 
