@@ -51,13 +51,13 @@ AIコーディング・エージェントとしてのセットアップをご所
 git clone https://github.com/PrismML-Eng/Bonsai-demo.git
 cd Bonsai-demo
 
-# (オプション値) モデルサイズを選択: 27B (既定値), 8B, 4B, もしくは 1.7B
+# (オプション値) モデルサイズを選択: 27B (既定値), 8B, 4B, あるいは 1.7B
 export BONSAI_MODEL=27B
 
-# あなたの HuggingFace トークンをセット (リポがプライベートである27Bの場合にのみ必要)
+# あなたの HuggingFace トークンをセット (コレが必要なのはリポがプライベート化されてる27Bモデルのみ)
 export BONSAI_TOKEN="hf_your_token_here"
 
-# １コマンドで全てやってのける: 依存関係インストール, モデル類 + バイナリ類のダウンロード
+# １コマンドが全てやってのける: 依存関係インストール, モデル + バイナリのダウンロード
 ./setup.sh
 ```
 
@@ -67,10 +67,10 @@ export BONSAI_TOKEN="hf_your_token_here"
 git clone https://github.com/PrismML-Eng/Bonsai-demo.git
 cd Bonsai-demo
 
-# (オプション値) モデルサイズを選択: 27B (既定値), 8B, 4B, もしくは 1.7B
+# (オプション値) モデルサイズを選択: 27B (既定値), 8B, 4B, あるいは 1.7B
 $env:BONSAI_MODEL = "27B"
 
-# あなたの HuggingFace トークンをセット (リポがプライベートである27Bの場合にのみ必要)
+# あなたの HuggingFace トークンをセット (コレが必要なのはリポがプライベート化されてる27Bモデルのみ)
 $env:BONSAI_TOKEN = "hf_your_token_here"
 
 # セットアップ実行
@@ -101,8 +101,7 @@ $env:BONSAI_FAMILY="ternary"; $env:BONSAI_MODEL="4B"
 
 See [community-benchmarks/](community-benchmarks/) for results on different hardware and templates to submit your own.
 
-## Mode
-ls
+## Models
 
 Two model families are available, each in sizes **27B**, **8B**, **4B**, and **1.7B**. The 27B models are vision-language models: they accept images as well as text; all 27B repos are gathered in the [Bonsai 27B HF collection](https://huggingface.co/collections/prism-ml/bonsai-27b).
 
