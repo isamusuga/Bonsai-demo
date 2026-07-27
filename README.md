@@ -78,17 +78,17 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\setup.ps1
 ```
 
-### Switching families and sizes
+### ファミリーとサイズの切り替え
 
-You can switch between the Ternary (default) and 1-bit families, and different model sizes instantly:
+あなたはTernary版 (既定値) と1-ビット版ファミリー間および、異なるモデル・サイズ間でも瞬時に切り替えられる:
 
 ```bash
-# run Ternary-Bonsai 4B
+# Ternary-Bonsai 4Bの実行
 BONSAI_FAMILY=ternary BONSAI_MODEL=4B ./scripts/download_models.sh
 BONSAI_FAMILY=ternary BONSAI_MODEL=4B ./scripts/run_llama.sh -p "Hello!"
 ```
 
-for Windows:
+Windows用:
 ```powershell
 $env:BONSAI_FAMILY="ternary"; $env:BONSAI_MODEL="4B"
 .\setup.ps1
