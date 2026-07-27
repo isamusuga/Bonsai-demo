@@ -51,13 +51,13 @@ AIコーディング・エージェントとしてのセットアップをご所
 git clone https://github.com/PrismML-Eng/Bonsai-demo.git
 cd Bonsai-demo
 
-# (Optional) Choose a model size: 27B (default), 8B, 4B, or 1.7B
+# (オプション値) モデルサイズを選択: 27B (既定値), 8B, 4B, もしくは 1.7B
 export BONSAI_MODEL=27B
 
-# Set your HuggingFace token (only required for 27B while its repos are private)
+# あなたの HuggingFace トークンをセット (リポがプライベートである27Bの場合にのみ必要)
 export BONSAI_TOKEN="hf_your_token_here"
 
-# One command does everything: installs deps, downloads models + binaries
+# １コマンドで全てやってのける: 依存関係インストール, モデル類 + バイナリ類のダウンロード
 ./setup.sh
 ```
 
@@ -67,28 +67,28 @@ export BONSAI_TOKEN="hf_your_token_here"
 git clone https://github.com/PrismML-Eng/Bonsai-demo.git
 cd Bonsai-demo
 
-# (Optional) Choose a model size: 27B (default), 8B, 4B, or 1.7B
+# (オプション値) モデルサイズを選択: 27B (既定値), 8B, 4B, もしくは 1.7B
 $env:BONSAI_MODEL = "27B"
 
-# Set your HuggingFace token (only required for 27B while its repos are private)
+# あなたの HuggingFace トークンをセット (リポがプライベートである27Bの場合にのみ必要)
 $env:BONSAI_TOKEN = "hf_your_token_here"
 
-# Run setup
+# セットアップ実行
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\setup.ps1
 ```
 
-### Switching families and sizes
+### ファミリーとサイズの切り替え
 
-You can switch between the Ternary (default) and 1-bit families, and different model sizes instantly:
+あなたはTernary版 (既定値) と1-ビット版ファミリー間および、異なるモデル・サイズ間でも瞬時に切り替えられる:
 
 ```bash
-# run Ternary-Bonsai 4B
+# Ternary-Bonsai 4Bの実行
 BONSAI_FAMILY=ternary BONSAI_MODEL=4B ./scripts/download_models.sh
 BONSAI_FAMILY=ternary BONSAI_MODEL=4B ./scripts/run_llama.sh -p "Hello!"
 ```
 
-for Windows:
+Windows用:
 ```powershell
 $env:BONSAI_FAMILY="ternary"; $env:BONSAI_MODEL="4B"
 .\setup.ps1
@@ -101,7 +101,8 @@ $env:BONSAI_FAMILY="ternary"; $env:BONSAI_MODEL="4B"
 
 See [community-benchmarks/](community-benchmarks/) for results on different hardware and templates to submit your own.
 
-## Models
+## Mode
+ls
 
 Two model families are available, each in sizes **27B**, **8B**, **4B**, and **1.7B**. The 27B models are vision-language models: they accept images as well as text; all 27B repos are gathered in the [Bonsai 27B HF collection](https://huggingface.co/collections/prism-ml/bonsai-27b).
 
