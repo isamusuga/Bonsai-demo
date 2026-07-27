@@ -51,13 +51,13 @@ AIコーディング・エージェントとしてのセットアップをご所
 git clone https://github.com/PrismML-Eng/Bonsai-demo.git
 cd Bonsai-demo
 
-# (Optional) Choose a model size: 27B (default), 8B, 4B, or 1.7B
+# (オプション値) モデルサイズを選択: 27B (既定値), 8B, 4B, あるいは 1.7B
 export BONSAI_MODEL=27B
 
-# Set your HuggingFace token (only required for 27B while its repos are private)
+# あなたの HuggingFace トークンをセット (コレが必要なのはリポがプライベート化されてる27Bモデルのみ)
 export BONSAI_TOKEN="hf_your_token_here"
 
-# One command does everything: installs deps, downloads models + binaries
+# １コマンドが全てやってのける: 依存関係インストール, モデル + バイナリのダウンロード
 ./setup.sh
 ```
 
@@ -67,13 +67,13 @@ export BONSAI_TOKEN="hf_your_token_here"
 git clone https://github.com/PrismML-Eng/Bonsai-demo.git
 cd Bonsai-demo
 
-# (Optional) Choose a model size: 27B (default), 8B, 4B, or 1.7B
+# (オプション値) モデルサイズを選択: 27B (既定値), 8B, 4B, あるいは 1.7B
 $env:BONSAI_MODEL = "27B"
 
-# Set your HuggingFace token (only required for 27B while its repos are private)
+# あなたの HuggingFace トークンをセット (コレが必要なのはリポがプライベート化されてる27Bモデルのみ)
 $env:BONSAI_TOKEN = "hf_your_token_here"
 
-# Run setup
+# セットアップ実行
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\setup.ps1
 ```
