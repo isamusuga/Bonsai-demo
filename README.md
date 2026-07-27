@@ -143,11 +143,12 @@ GGUF (llama.cpp) および MLX 2-ビット形式にて利用可能。
 
 コレが既定のファミリーです。1-ビット版 Bonsai ファミリーを代わりに使うには `BONSAI_FAMILY=bonsai` をセットする。
 
-### Environment variables
+### 環境変数
 
-Both variables are optional. **If you set neither, the default is `Ternary-Bonsai-27B`:** that's what plain `./setup.sh` downloads and runs. They're read by `setup.sh`, `setup.ps1`, `download_models.sh`, and every `run_*` / `start_*` script (Linux, macOS, and Windows).
+両変数ともオプション値。**どちらでも無いものをセットした時, 既定値は `Ternary-Bonsai-27B` となる:** それこそが素の `./setup.sh` がダウンロードならびに実行する中身である. それらは `setup.sh`, `setup.ps1`, `download_models.sh`,
+および毎度 `run_*` / `start_*` スクリプト (Linux, macOS, と Windows)に読取られる.
 
-| Variable        | Default   | Valid values                       | Purpose |
+| 変数        | 既定値   | 有効値                       | 目的 |
 |-----------------|-----------|------------------------------------|---------|
 | `BONSAI_FAMILY` | `ternary` | `ternary`, `bonsai`, `all`         | Model family. `ternary` = Ternary-Bonsai; `bonsai` = 1-bit Bonsai. `all` expands to both families (setup/download only). |
 | `BONSAI_MODEL`  | `27B`    | `27B`, `8B`, `4B`, `1.7B`, `all`   | Model size. `all` expands to all four sizes (setup/download only). |
