@@ -5,29 +5,29 @@
 </p>
 
 <p align="center">
-  <a href="https://prismml.com"><b>Website</b></a> &nbsp;|&nbsp;
+  <a href="https://prismml.com"><b>ウェブサイト</b></a> &nbsp;|&nbsp;
   <a href="https://github.com/PrismML-Eng/Bonsai-demo"><b>GitHub</b></a> &nbsp;|&nbsp;
   <a href="https://discord.gg/prismml"><b>Discord</b></a>
 </p>
 
 <p align="center">
-  <b>HF Collections:</b>
+  <b>HF コレクションズ:</b>
   <a href="https://huggingface.co/collections/prism-ml/bonsai-27b">Bonsai 27B</a> ·
-  <a href="https://huggingface.co/collections/prism-ml/bonsai">Bonsai (1-bit)</a> ·
+  <a href="https://huggingface.co/collections/prism-ml/bonsai">Bonsai (1-ビット版)</a> ·
   <a href="https://huggingface.co/collections/prism-ml/ternary-bonsai">Ternary-Bonsai</a>
 </p>
 
 <p align="center">
-  <b>Whitepapers:</b>
+  <b>白書類:</b>
   <a href="bonsai-27b-whitepaper.pdf">Bonsai 27B</a> ·
-  <a href="1-bit-bonsai-8b-whitepaper.pdf">1-bit Bonsai 8B</a> ·
+  <a href="1-bit-bonsai-8b-whitepaper.pdf">1-ビット版 Bonsai 8B</a> ·
   <a href="ternary-bonsai-8b-whitepaper.pdf">Ternary-Bonsai 8B</a>
 </p>
 
 ---
 
 
-Using this demo repository you can run **Bonsai** (1-bit) and **Ternary-Bonsai** language models locally on Mac (Metal), Linux/Windows (CUDA, Vulkan, ROCm), or CPU.
+本デモ・リポジトリを用いれば、あなたは **Bonsai** (1-ビット版) および **Ternary-Bonsai** 言語モデル達をMac (Metal), Linux/Windows (CUDA, Vulkan, ROCm), もしくはCPU上でローカルに実行できます。
 
 ## 🌱 New: Bonsai 27B
 
