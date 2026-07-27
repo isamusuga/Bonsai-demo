@@ -107,11 +107,11 @@ $env:BONSAI_FAMILY="ternary"; $env:BONSAI_MODEL="4B"
 
 両形式ともllama.cppのメインラインに実装されつつあります: **Q1_0 (1-ビット版) は完全にアップストリームにマージされ**, そして **Q2_0 (ternary版) は現在はメインラインCPU、Metal、Vulkanで動作し**, CUDAについては現在レビュー中です。詳細およびメインライン互換ファイル: [binary版の現況](#upstream-status-for-binary) と [ternary版の現況](#upstream-status-for-ternary) は後述にて。
 
-### Bonsai (1-bit)
+### Bonsai (1-ビット版)
 
-Available in GGUF (llama.cpp) and MLX 1-bit formats.
+GGUF (llama.cpp) および MLX 1-ビット形式にて利用可能。
 
-| Model               | Format   | HuggingFace Repo                                                                          |
+| モデル               | 形式   | HuggingFace リポ                                                                          |
 |---------------------|----------|-------------------------------------------------------------------------------------------|
 | Bonsai-27B          | GGUF     | [prism-ml/Bonsai-27B-gguf](https://huggingface.co/prism-ml/Bonsai-27B-gguf)             |
 | Bonsai-27B          | MLX      | [prism-ml/Bonsai-27B-mlx-1bit](https://huggingface.co/prism-ml/Bonsai-27B-mlx-1bit)     |
@@ -122,7 +122,8 @@ Available in GGUF (llama.cpp) and MLX 1-bit formats.
 | Bonsai-1.7B         | GGUF     | [prism-ml/Bonsai-1.7B-gguf](https://huggingface.co/prism-ml/Bonsai-1.7B-gguf)           |
 | Bonsai-1.7B         | MLX      | [prism-ml/Bonsai-1.7B-mlx-1bit](https://huggingface.co/prism-ml/Bonsai-1.7B-mlx-1bit)   |
 
-Set `BONSAI_MODEL` to choose which size to download and run (default: `27B`).
+ダウンロードおよび実行時にサイズ選択をするには `BONSAI_MODEL` 
+(既定値: `27B`)をセットする。
 
 ### Ternary-Bonsai
 
