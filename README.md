@@ -127,10 +127,10 @@ GGUF (llama.cpp) および MLX 1-ビット形式にて利用可能。
 
 ### Ternary-Bonsai
 
-Available in GGUF (llama.cpp) and MLX 2-bit formats.
+GGUF (llama.cpp) および MLX 2-ビット形式にて利用可能。
 
 
-| Model                  | Format        | HuggingFace Repo                                                                                        |
+| モデル                  | 形式        | HuggingFace リポ                                                                                        |
 |------------------------|---------------|---------------------------------------------------------------------------------------------------------|
 | Ternary-Bonsai-27B     | GGUF          | [prism-ml/Ternary-Bonsai-27B-gguf](https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf)             |
 | Ternary-Bonsai-27B     | MLX (2-bit)   | [prism-ml/Ternary-Bonsai-27B-mlx-2bit](https://huggingface.co/prism-ml/Ternary-Bonsai-27B-mlx-2bit)     |
@@ -141,7 +141,7 @@ Available in GGUF (llama.cpp) and MLX 2-bit formats.
 | Ternary-Bonsai-1.7B    | GGUF          | [prism-ml/Ternary-Bonsai-1.7B-gguf](https://huggingface.co/prism-ml/Ternary-Bonsai-1.7B-gguf)           |
 | Ternary-Bonsai-1.7B    | MLX (2-bit)   | [prism-ml/Ternary-Bonsai-1.7B-mlx-2bit](https://huggingface.co/prism-ml/Ternary-Bonsai-1.7B-mlx-2bit)   |
 
-This is the default family. Set `BONSAI_FAMILY=bonsai` to use the 1-bit Bonsai family instead.
+コレが既定のファミリーです。1-ビット版 Bonsai ファミリーを代わりに使うには `BONSAI_FAMILY=bonsai` をセットする。
 
 ### Environment variables
 
