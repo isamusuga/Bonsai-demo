@@ -170,14 +170,14 @@ BONSAI_FAMILY=all BONSAI_MODEL=all ./setup.sh               # マトリックス
 BONSAI_FAMILY=bonsai BONSAI_SKIP_GGUF=1 ./setup.sh          # Bonsai-27B, MLX 限定化 (macOS向け, ディスク容量節約)
 ```
 
-## Upstream Status for Binary
+## アップストリームの現況、Binary版向け
 
-Q1_0 is supported out of the box in upstream [llama.cpp](https://github.com/ggml-org/llama.cpp) across many backends: CPU (generic, NEON, and optimized x86), Metal, CUDA, and Vulkan.
+Q1_0 は多岐に渡るバックエンド: CPU (ジェネリック, NEON, および最適化済x86), Metal, CUDA, そして Vulkanを [llama.cpp](https://github.com/ggml-org/llama.cpp) アップストリームにてOOTBがサポートされる.
 
-| Runtime | Status |
+| ランタイム | 現況 |
 |---------|--------|
-| llama.cpp (CPU, Metal, CUDA, Vulkan) | ✅ Merged upstream, works out of the box |
-| MLX (1-bit) | ⏳ Pending upstream: [mlx#3161](https://github.com/ml-explore/mlx/pull/3161); until it merges, use [PrismML-Eng/mlx](https://github.com/PrismML-Eng/mlx) (branch `prism`, built automatically by `setup.sh`) |
+| llama.cpp (CPU, Metal, CUDA, Vulkan) | ✅ アップストリームにマージ済み, 導入後即座に稼働可能 |
+| MLX (1-ビット版) | ⏳ アップストリームで保留中: [mlx#3161](https://github.com/ml-explore/mlx/pull/3161); それがマージされるまでは, [PrismML-Eng/mlx](https://github.com/PrismML-Eng/mlx) (branch `prism`, `setup.sh`によって自動的にビルドされる)を使え |
 
 ## Upstream Status for Ternary
 
