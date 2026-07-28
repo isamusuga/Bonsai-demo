@@ -189,15 +189,15 @@ Ternary版サポートは[llama.cpp](https://github.com/ggml-org/llama.cpp)メ�
 | `*-Q2_0_g64.gguf` | グループ・サイズは64 (2.25 ビット/加重). コレは公式 llama.cpp 形式であり; これらは現在のものに代わり、単に「`Q2_0`」へと改名される。 | llama.cppメインライン (これまでのCPUとMetal) |
 | `*-PQ2_0.gguf` | まだサポートされてない. 今後のフォーク形式として計画された: アップストリームの `Q2_0` と共存できるよう、単にそれ自身独自の ggml 種別IDのもと現在のグループ-128 `Q2_0`と(中身が)同じ形式である。 | まだ何も無し (フォークのサポートが計画済) |
 
-Backend-by-backend migration status:
+バックエンド別-バックエンド移行状況:
 
-| Backend | Status | Where |
+| バックエンド | 現況 | 引用箇所 |
 |---------|--------|-------|
-| CPU (ARM NEON + generic scalar) | ✅ Merged in mainline llama.cpp | [ggml-org/llama.cpp#24448](https://github.com/ggml-org/llama.cpp/pull/24448) |
-| Metal | ✅ Merged in mainline llama.cpp | [ggml-org/llama.cpp#25419](https://github.com/ggml-org/llama.cpp/pull/25419) |
-| Vulkan | ✅ Merged in mainline llama.cpp | [ggml-org/llama.cpp#25430](https://github.com/ggml-org/llama.cpp/pull/25430) |
-| CUDA | 🔄 In review upstream | [ggml-org/llama.cpp#25707](https://github.com/ggml-org/llama.cpp/pull/25707) |
-| x86 (AVX-512-VNNI) | ⏳ Pending | TBD |
+| CPU (ARM NEON + 汎用スカラー) | ✅ llama.cppメインラインにマージ済 | [ggml-org/llama.cpp#24448](https://github.com/ggml-org/llama.cpp/pull/24448) |
+| Metal | ✅ llama.cppメインラインにマージ済 | [ggml-org/llama.cpp#25419](https://github.com/ggml-org/llama.cpp/pull/25419) |
+| Vulkan | ✅ llama.cppメインラインにマージ済 | [ggml-org/llama.cpp#25430](https://github.com/ggml-org/llama.cpp/pull/25430) |
+| CUDA | 🔄 アップストリームにてレビュー中 | [ggml-org/llama.cpp#25707](https://github.com/ggml-org/llama.cpp/pull/25707) |
+| x86 (AVX-512-VNNI) | ⏳ 保留中 | TBD(詳細未定・確認中・後日発表予定) |
 
 **CPU, Metal, and Vulkan now run `Q2_0` on mainline llama.cpp, no fork needed** (use a recent `ggml-org/llama.cpp` build with the `*-Q2_0_g64.gguf` files). CUDA is the last one in review upstream ([#25707](https://github.com/ggml-org/llama.cpp/pull/25707)); until it merges, use this demo: it ships the fork [pre-built binaries](https://github.com/PrismML-Eng/llama.cpp/releases/tag/prism-b9596-9fcaed7), so everything works out of the box with the group-128 `*-Q2_0.gguf` files it downloads. MLX 2-bit is supported in stock [MLX](https://github.com/ml-explore/mlx), no fork needed.
 
