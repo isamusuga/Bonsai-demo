@@ -185,9 +185,9 @@ Ternary版サポートは[llama.cpp](https://github.com/ggml-org/llama.cpp)メ�
 
 | ファイル | 形式 | 稼働環境 |
 |------|--------|---------|
-| `*-Q2_0.gguf` | Group size 128. **The format this demo uses**, compatible with our fork. Once the llama.cpp migration completes, these files will be deprecated and replaced by the `PQ2_0` ggufs | This demo / the fork binaries. Will not load on mainline (same type id, different block size) |
-| `*-Q2_0_g64.gguf` | Group size 64 (2.25 bpw). The official llama.cpp format; these will be renamed to plain `Q2_0`, replacing the current ones | Mainline llama.cpp (CPU and Metal so far) |
-| `*-PQ2_0.gguf` | Not supported yet. Planned as the fork format going forward: the same format as the current group-128 `Q2_0`, just under its own ggml type id so it can coexist with the upstream `Q2_0` | Nothing yet (fork support planned) |
+| `*-Q2_0.gguf` | グループ・サイズは128. **この形式は本デモが使用し**, 我々のフォークと互換性がある. ひとたびllama.cppの移行が完了した暁には, これらのファイルは廃止予定となり、そして `PQ2_0` ggufs によってリプレイスされる | このデモ / およびフォーク・バイナリ. メインラインでは読み込まれない (同一種別IDだが, ブロック・サイズが異なる) |
+| `*-Q2_0_g64.gguf` | グループ・サイズは64 (2.25 ビット/加重). コレは公式 llama.cpp 形式であり; これらは現在のものに代わり、単に「`Q2_0`」へと改名される。 | llama.cppメインライン (これまでのCPUとMetal) |
+| `*-PQ2_0.gguf` | まだサポートされてない. 今後のフォーク形式として計画された: アップストリームの `Q2_0` と共存できるよう、単にそれ自身独自の ggml 種別IDのもと現在のグループ-128 `Q2_0`と(中身が)同じ形式である。 | まだ何も無し (フォークのサポートが計画済) |
 
 Backend-by-backend migration status:
 
