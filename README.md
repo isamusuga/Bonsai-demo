@@ -150,11 +150,11 @@ GGUF (llama.cpp) および MLX 2-ビット形式にて利用可能。
 
 | 変数        | 既定値   | 有効値                       | 目的 |
 |-----------------|-----------|------------------------------------|---------|
-| `BONSAI_FAMILY` | `ternary` | `ternary`, `bonsai`, `all`         | Model family. `ternary` = Ternary-Bonsai; `bonsai` = 1-bit Bonsai. `all` expands to both families (setup/download only). |
-| `BONSAI_MODEL`  | `27B`    | `27B`, `8B`, `4B`, `1.7B`, `all`   | Model size. `all` expands to all four sizes (setup/download only). |
-| `BONSAI_TOKEN`  | —        | HF read-only token                 | Only needed for the 27B models while their repos are private (removed at launch). |
-| `BONSAI_SKIP_GGUF` | unset  | `1`                                 | Skip the GGUF download entirely (macOS MLX-only setups, saves disk space). The llama.cpp scripts then point you at the MLX ones instead (see "Running the Model" below). |
-| `BONSAI_SKIP_MLX`  | unset  | `1`                                 | Skip the MLX download (macOS only; MLX is skipped automatically on Intel Macs and non-macOS). |
+| `BONSAI_FAMILY` | `ternary` | `ternary`, `bonsai`, `all`         | モデル・ファミリ. `ternary` = Ternary-Bonsai; `bonsai` = 1-ビット版 Bonsai. `all` は両ファミリに拡大する (セットアップ/ダウンロード限定). |
+| `BONSAI_MODEL`  | `27B`    | `27B`, `8B`, `4B`, `1.7B`, `all`   | モデル・サイズ. `all` は全4サイズに拡大する (セットアップ/ダウンロード限定). |
+| `BONSAI_TOKEN`  | —        | HF 読取り専用トークン                 | リポがプライベート化されてる期間中の27Bモデルだけ必要 (ローンチ時には除去される). |
+| `BONSAI_SKIP_GGUF` | 未セット  | `1`                                 | GGUF ダウンロードを全体的にスキップする (macOS MLX-限定セットアップ, ディスク容量節約). llama.cppスクリプトは、その後代わりのMLX用スクリプトを指示・案内する（後述の「モデルの実行」を参照). |
+| `BONSAI_SKIP_MLX`  | 未セット  | `1`                                 | MLX ダウンロードをスキップする (macOS 限定; Intel Mac類 および 非-macOS上ではMLXは自動的にスキップされる). |
 
 `all` は `setup.sh` / `setup.ps1` / `download_models.sh` についてのみ有効 — run/server スクリプトは確固たるファミリー/サイズを必要とする。
 
