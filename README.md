@@ -179,11 +179,11 @@ Q1_0 は多岐に渡るバックエンド: CPU (ジェネリック, NEON, およ
 | llama.cpp (CPU, Metal, CUDA, Vulkan) | ✅ アップストリームにマージ済み, 導入後即座に稼働可能 |
 | MLX (1-ビット版) | ⏳ アップストリームで保留中: [mlx#3161](https://github.com/ml-explore/mlx/pull/3161); それがマージされるまでは, [PrismML-Eng/mlx](https://github.com/PrismML-Eng/mlx) (branch `prism`, `setup.sh`によって自動的にビルドされる)を使え |
 
-## Upstream Status for Ternary
+## アップストリームの現況、Ternary版向け
 
-Ternary support is in the middle of migrating into mainline [llama.cpp](https://github.com/ggml-org/llama.cpp): backends are landing one by one, so today it is a mix of mainline and our fork. The practical consequence first: **we currently ship three ternary GGUF variants, and each one needs to run in the right place.**
+Ternary版サポートは[llama.cpp](https://github.com/ggml-org/llama.cpp)メインラインへの移行段階中期にあり: バックエンドを1つずつ陸揚げしている最中であり、したがって今日のそれはメインラインと我々のフォークの混合物です。実際の影響をまずは: **我々は現在3つのternary版 GGUF 派生種を出荷し, そして各々を適宜適切な場所で稼働させる必要性があります。**
 
-| File | Format | Runs on |
+| ファイル | 形式 | 稼働環境 |
 |------|--------|---------|
 | `*-Q2_0.gguf` | Group size 128. **The format this demo uses**, compatible with our fork. Once the llama.cpp migration completes, these files will be deprecated and replaced by the `PQ2_0` ggufs | This demo / the fork binaries. Will not load on mainline (same type id, different block size) |
 | `*-Q2_0_g64.gguf` | Group size 64 (2.25 bpw). The official llama.cpp format; these will be renamed to plain `Q2_0`, replacing the current ones | Mainline llama.cpp (CPU and Metal so far) |
