@@ -156,18 +156,18 @@ GGUF (llama.cpp) および MLX 2-ビット形式にて利用可能。
 | `BONSAI_SKIP_GGUF` | unset  | `1`                                 | Skip the GGUF download entirely (macOS MLX-only setups, saves disk space). The llama.cpp scripts then point you at the MLX ones instead (see "Running the Model" below). |
 | `BONSAI_SKIP_MLX`  | unset  | `1`                                 | Skip the MLX download (macOS only; MLX is skipped automatically on Intel Macs and non-macOS). |
 
-`all` is only valid for `setup.sh` / `setup.ps1` / `download_models.sh` — the run/server scripts need a concrete family/size.
+`all` は `setup.sh` / `setup.ps1` / `download_models.sh` についてのみ有効 — run/server スクリプトは確固たるファミリー/サイズを必要とする。
 
-Combine them freely:
+コレらを自由に組み合わせる:
 
 ```bash
-./setup.sh                                                  # Ternary-Bonsai-27B (default)
+./setup.sh                                                  # Ternary-Bonsai-27B (既定値)
 BONSAI_MODEL=1.7B ./setup.sh                                # Ternary-Bonsai-1.7B
-BONSAI_FAMILY=bonsai ./setup.sh                             # Bonsai-27B (1-bit)
+BONSAI_FAMILY=bonsai ./setup.sh                             # Bonsai-27B (1-ビット版)
 BONSAI_FAMILY=bonsai BONSAI_MODEL=4B ./setup.sh             # Bonsai-4B
-BONSAI_MODEL=all ./setup.sh                                 # All 4 Ternary-Bonsai sizes
-BONSAI_FAMILY=all BONSAI_MODEL=all ./setup.sh               # Full matrix (8 downloads)
-BONSAI_FAMILY=bonsai BONSAI_SKIP_GGUF=1 ./setup.sh          # Bonsai-27B, MLX only (macOS, saves disk space)
+BONSAI_MODEL=all ./setup.sh                                 # Ternary-Bonsaiファミリ 全４サイズ
+BONSAI_FAMILY=all BONSAI_MODEL=all ./setup.sh               # マトリックス図全部 (計8 ダウンロードを行う)
+BONSAI_FAMILY=bonsai BONSAI_SKIP_GGUF=1 ./setup.sh          # Bonsai-27B, MLX 限定化 (macOS向け, ディスク容量節約)
 ```
 
 ## Upstream Status for Binary
