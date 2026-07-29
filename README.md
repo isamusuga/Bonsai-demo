@@ -199,11 +199,11 @@ Ternary版サポートは[llama.cpp](https://github.com/ggml-org/llama.cpp)メ�
 | CUDA | 🔄 アップストリームにてレビュー中 | [ggml-org/llama.cpp#25707](https://github.com/ggml-org/llama.cpp/pull/25707) |
 | x86 (AVX-512-VNNI) | ⏳ 保留中 | TBD(詳細未定・確認中・後日発表予定) |
 
-**CPU, Metal, and Vulkan now run `Q2_0` on mainline llama.cpp, no fork needed** (use a recent `ggml-org/llama.cpp` build with the `*-Q2_0_g64.gguf` files). CUDA is the last one in review upstream ([#25707](https://github.com/ggml-org/llama.cpp/pull/25707)); until it merges, use this demo: it ships the fork [pre-built binaries](https://github.com/PrismML-Eng/llama.cpp/releases/tag/prism-b9596-9fcaed7), so everything works out of the box with the group-128 `*-Q2_0.gguf` files it downloads. MLX 2-bit is supported in stock [MLX](https://github.com/ml-explore/mlx), no fork needed.
+**CPU, Metal, そして Vulkanについては今llama.cppメインライン上で `Q2_0` を走らせられ、フォーク版を必要としない** (`*-Q2_0_g64.gguf` ファイルには `ggml-org/llama.cpp` の最新版ビルドを使え). CUDAはアップストリーム・レビューでラスイチ ([#25707](https://github.com/ggml-org/llama.cpp/pull/25707)) であり; マージされるまで, このデモ版を使え: コレにはフォーク版の[ビルド済みバイナリ](https://github.com/PrismML-Eng/llama.cpp/releases/tag/prism-b9596-9fcaed7)が同梱され, それ故ダウンロードされたグループ-128な `*-Q2_0.gguf` ファイルを使えば、全てが何の設定もなしにそのまま稼働する. MLX 2-ビット版は吊るしの[MLX](https://github.com/ml-explore/mlx)でサポートされており、フォーク版は不要。
 
-To run the smaller ternary models directly on stock `ggml-org/llama.cpp` (CPU or Metal), use the group-64 files:
+より小さい ternary モデルを直に吊るしの `ggml-org/llama.cpp` (CPU もしくは Metal)で走らすには, グループ-64なファイルを使え:
 
-| Model | Repo | File (mainline-compatible) |
+| モデル | リポ | ファイル (メインライン-互換) |
 |-------|------|----------------------------|
 | 1.7B | [prism-ml/Ternary-Bonsai-1.7B-gguf](https://huggingface.co/prism-ml/Ternary-Bonsai-1.7B-gguf) | `Ternary-Bonsai-1.7B-Q2_0_g64.gguf` |
 | 4B | [prism-ml/Ternary-Bonsai-4B-gguf](https://huggingface.co/prism-ml/Ternary-Bonsai-4B-gguf) | `Ternary-Bonsai-4B-Q2_0_g64.gguf` |
