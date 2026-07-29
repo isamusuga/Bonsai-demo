@@ -215,20 +215,20 @@ hf download prism-ml/Ternary-Bonsai-4B-gguf  Ternary-Bonsai-4B-Q2_0_g64.gguf  --
 hf download prism-ml/Ternary-Bonsai-8B-gguf  Ternary-Bonsai-8B-Q2_0_g64.gguf  --local-dir models
 ```
 
-## What `setup.sh` Does
+## `setup.sh` は何をしてるのか
 
-The setup script handles everything for you, even on a fresh machine:
+このセットアップ・スクリプトは貴方のために全てを捌く、例え新品のマシンであったとしても:
 
-1. **Checks/installs system deps:** Xcode CLT on macOS, build-essential on Linux
-2. **Installs [uv](https://docs.astral.sh/uv/):** fast Python package manager (user-local, not global)
-3. **Creates a Python venv** and runs `uv sync` — installs cmake, ninja, huggingface-cli from `pyproject.toml`
-4. **Downloads models** from HuggingFace (needs `BONSAI_TOKEN` for 27B while its repos are private)
-5. **Downloads pre-built binaries** from [GitHub Release](https://github.com/PrismML-Eng/llama.cpp/releases/tag/prism-b9596-9fcaed7) (or builds from source if you prefer)
-6. **Builds MLX from source** (macOS only): clones our fork, builds it into the venv, installs the ML stack (mlx-lm, torch, transformers)
-7. **Installs Open WebUI** into the venv for the agentic demo (skip with `BONSAI_OPENWEBUI=0`)
-8. **Builds the code-interpreter venv** (`.venv-jupyter`): Jupyter + matplotlib / pandas / numpy / scipy / sympy / yfinance for the Open WebUI code interpreter (skip with `BONSAI_CODE_INTERPRETER=0`)
+1. **システム依存関係をチェック/インストール:** macOSではXcode CLT, Linuxではbuild-essential
+2. ** [uv](https://docs.astral.sh/uv/)をインストール:** 高速Pythonパッケージ・マネージャ (グローバルじゃなく、ローカル・ユーザに限局化してインストする)
+3. **Python venvの作成** 及び `uv sync` の実行 —  `pyproject.toml`からcmake, ninja, huggingface-cliのインストール
+4. HuggingFace (リポがプライベート期間中の27Bに至っては `BONSAI_TOKEN` が必要)から**モデルのダウンロード**
+5. [GitHub Release](https://github.com/PrismML-Eng/llama.cpp/releases/tag/prism-b9596-9fcaed7)から**ビルド済バイナリのダウンロード** (かもしくは、そっちが優先したけりゃソースからビルドする)
+6. **ソースからMLXをビルド** (macOS 限定): 我々のフォークをクローンし, ビルドしたそれをvenvへ放り込んで, MLスタック(mlx-lm, torch, transformers)をインストール 
+7. エージェント型デモ用に venv へ**Open WebUIをインストール**  (`BONSAI_OPENWEBUI=0`でスキップ)
+8. **コード-インタープリタを venv にビルド** (`.venv-jupyter`): Open WebUI コード インタープリタ用にJupyter + matplotlib / pandas / numpy / scipy / sympy / yfinance (`BONSAI_CODE_INTERPRETER=0`でスキップ)
 
-Re-running `setup.sh` is safe — it skips already-completed steps.
+ `setup.sh` の再実行は安全 — すでに完了した段階については飛ばす.
 
 ---
 
