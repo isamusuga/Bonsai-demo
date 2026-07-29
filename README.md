@@ -232,32 +232,29 @@ hf download prism-ml/Ternary-Bonsai-8B-gguf  Ternary-Bonsai-8B-Q2_0_g64.gguf  --
 
 ---
 
-## Running the Model
+## モデルの実行
 
-All run scripts respect `BONSAI_MODEL` (default `27B`). Set it to run a different size:
+全ての実行スクリプトはBONSAI_MODEL (既定値 `27B`)を尊重する. 異なるサイズを所望ならコレをセットせよ:
 
-### llama.cpp (Mac / Linux — auto-detects platform)
+### llama.cpp (Mac / Linux — 自動-検出 プラットフォーム)
 
 ```bash
-./scripts/run_llama.sh -p "What is the capital of France?"
+./scripts/run_llama.sh -p "フランスの首都は何？"
 
-# Run a different model size
-BONSAI_MODEL=4B ./scripts/run_llama.sh -p "Write a haiku about bonsai trees"
+# 異なるモデルサイズの実行
+BONSAI_MODEL=4B ./scripts/run_llama.sh -p "盆栽樹についての俳句を一句ちょうだい"
 ```
 
-These scripts run the llama.cpp backend and need GGUF weights. On an MLX-only setup
-(e.g. you used `BONSAI_SKIP_GGUF=1`), they stop with an error that points at both
-options — running the MLX script directly (`run_mlx.sh` / `start_mlx_server.sh`), or
-downloading the GGUF weights.
+これらのスクリプトは llama.cpp パックエンドの実行と GGUF 加重を必要とする. MLX-限定セットアップでは (e.g. あなたが `BONSAI_SKIP_GGUF=1`を使ったとして), それらは両オプションを指示するエラーで停止する — すなわち MLX スクリプトの直接実行 (`run_mlx.sh` / `start_mlx_server.sh`) ならびに GGUF 加重のダウンロードである.
 
 ### llama.cpp (Windows PowerShell)
 
 ```powershell
-.\scripts\run_llama.ps1 -p "What is the capital of France?"
+.\scripts\run_llama.ps1 -p "フランスの首都は何？"
 
-# Run a different model size
+# 異なるモデルサイズの実行
 $env:BONSAI_MODEL = "4B"
-.\scripts\run_llama.ps1 -p "Write a haiku about bonsai trees"
+.\scripts\run_llama.ps1 -p "盆栽樹についての俳句を一句ちょうだい"
 ```
 
 ### MLX — Mac (Apple Silicon)
