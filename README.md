@@ -220,7 +220,7 @@ hf download prism-ml/Ternary-Bonsai-8B-gguf  Ternary-Bonsai-8B-Q2_0_g64.gguf  --
 このセットアップ・スクリプトは貴方のために全てを捌く、例え新品のマシンであったとしても:
 
 1. **システム依存関係をチェック/インストール:** macOSではXcode CLT, Linuxではbuild-essential
-2. ** [uv](https://docs.astral.sh/uv/)をインストール:** 高速Pythonパッケージ・マネージャ (グローバルじゃなく、ローカル・ユーザに限局化してインストする)
+2. **[uv](https://docs.astral.sh/uv/)をインストール:** 高速Pythonパッケージ・マネージャ (グローバルじゃなく、ローカル・ユーザに限局化してインストする)
 3. **Python venvの作成** 及び `uv sync` の実行 —  `pyproject.toml`からcmake, ninja, huggingface-cliのインストール
 4. HuggingFace (リポがプライベート期間中の27Bに至っては `BONSAI_TOKEN` が必要)から**モデルのダウンロード**
 5. [GitHub Release](https://github.com/PrismML-Eng/llama.cpp/releases/tag/prism-b9596-9fcaed7)から**ビルド済バイナリのダウンロード** (かもしくは、そっちが優先したけりゃソースからビルドする)
