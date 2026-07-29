@@ -105,7 +105,7 @@ $env:BONSAI_FAMILY="ternary"; $env:BONSAI_MODEL="4B"
 
 ２つのモデル・ファミリー群が利用可能であり, それぞれのサイズは**27B**, **8B**, **4B**, そして **1.7B**です。このうち27Bモデルは視覚言語モデルであり: それらは文書同様、画像を受け入れます; 全27Bリポは[Bonsai 27B HF コレクション](https://huggingface.co/collections/prism-ml/bonsai-27b)に集められてます。
 
-両形式ともllama.cppのメインラインに実装されつつあります: **Q1_0 (1-ビット版) は完全にアップストリームにマージされ**, そして **Q2_0 (ternary版) は現在はメインラインCPU、Metal、Vulkanで動作し**, CUDAについては現在レビュー中です。詳細およびメインライン互換ファイル: [binary版の現況](#upstream-status-for-binary) と [ternary版の現況](#upstream-status-for-ternary) は後述にて。
+両形式ともllama.cppのメインラインに実装されつつあります: **Q1_0 (1-ビット版) は完全にアップストリームにマージされ**, そして **Q2_0 (ternary版) は現在はメインラインCPU、Metal、Vulkanで動作し**, CUDAについては現在レビュー中です。詳細およびメインライン互換ファイル: [binary版の現況](#アップストリームの現況binary版向け) と [ternary版の現況](#アップストリームの現況ternary版向け) は後述にて。
 
 ### Bonsai (1-ビット版)
 
