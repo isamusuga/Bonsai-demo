@@ -261,16 +261,16 @@ $env:BONSAI_MODEL = "4B"
 
 ```bash
 source .venv/bin/activate
-./scripts/run_mlx.sh -p "What is the capital of France?"
+./scripts/run_mlx.sh -p "フランスの首都は何？"
 ```
 
-**Tested versions (reproducibility).** The released MLX weights are plain safetensors and need no runtime patches. The 1-bit packs need an MLX build with 1-bit quantization support: the [PrismML-Eng/mlx](https://github.com/PrismML-Eng/mlx) fork, branch `prism`, until [mlx#3161](https://github.com/ml-explore/mlx/pull/3161) merges upstream. The 2-bit ternary packs run on stock MLX. The released 27B packs were validated with:
+**テスト中バージョン (再現性).** リリースされた MLX 加重は素のセーフテンソルであり、かつランタイム・パッチの必要はない. この1-ビット版パックは1-ビット量子化対応を果たした MLX ビルドを要し: コレは [PrismML-Eng/mlx](https://github.com/PrismML-Eng/mlx) フォーク(`prism`ブランチ)の [mlx#3161](https://github.com/ml-explore/mlx/pull/3161) がアップストリームにマージするまでである. 2-ビット ternary版パックは吊るしのMLXで走る. リリースされた27Bパックは以下の条件で検証された:
 
 - Python 3.11
-- mlx fork branch `prism` at commit [`88c9c20`](https://github.com/PrismML-Eng/mlx/commit/88c9c205a50f)
-- `mlx-lm==0.31.2` (the version `setup.sh` pins)
+- mlxからフォークした`prism`ブランチのコミット時点[`88c9c20`](https://github.com/PrismML-Eng/mlx/commit/88c9c205a50f)
+- `mlx-lm==0.31.2` (このバージョンは `setup.sh` がピン留めする)
 
-`setup.sh` builds the fork from the branch tip. To pin the exact validated runtime instead, clone and check out the commit before running setup; setup reuses an existing `./mlx` checkout:
+`setup.sh` はブランチのヒントから(最新版)フォークをビルドする. 特定の検証済みランタイムを代わりにピン留め(固定化)するには, セットアップ実行前に当該コミットのクローンとチェックアウトをせよ; なおセットアップは既存の `./mlx` チェックアウトを再利用する:
 
 ```bash
 git clone -b prism https://github.com/PrismML-Eng/mlx.git mlx
