@@ -278,24 +278,25 @@ git -C mlx checkout 88c9c20
 ./setup.sh
 ```
 
-### Chat Server
+### チャット・サーバ
 
-Start llama-server with its built-in chat UI:
+その内蔵チャットUIで llama-server を起動するには:
 
 ```bash
 ./scripts/start_llama_server.sh    # http://localhost:8080
 
-# Serve a different model size
+# 別のモデルサイズでサービスさせるには
 BONSAI_MODEL=4B ./scripts/start_llama_server.sh
 ```
 
-For Windows PowerShell:
+Windows PowerShell 向け:
 
 ```powershell
 .\scripts\start_llama_server.ps1
 ```
 
-The scripts auto-detect your GPU (Metal, CUDA, ROCm, Vulkan) and offload all layers. If the detection picks a GPU you do not want, for example Vulkan on a machine whose only GPU is a weak integrated one, set `BONSAI_NGL=0` for CPU-only inference, or any layer count for partial offload (PowerShell: `$env:BONSAI_NGL = "0"`).
+このスクリプトは、あなたのGPU (Metal, CUDA, ROCm, Vulkan)
+を自動検出し、かつ全レイヤーをオフロードする。もし検出器が選び抜いたGPUが気に食わないのなら (例えば弱っちい統合型GPUしか持ち得ないマシン上のVulkan等) CPU限定推論, あるいは任意レイヤー数の部分的オフロードのために `BONSAI_NGL=0` をセットせよ (PowerShellなら: `$env:BONSAI_NGL = "0"`).
 
 #### Thinking
 
