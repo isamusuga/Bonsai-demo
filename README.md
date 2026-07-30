@@ -295,8 +295,7 @@ Windows PowerShell 向け:
 .\scripts\start_llama_server.ps1
 ```
 
-このスクリプトは、あなたのGPU (Metal, CUDA, ROCm, Vulkan)
-を自動検出し、かつ全レイヤーをオフロードする。もし検出器が選び抜いたGPUが気に食わないのなら (例えば弱っちい統合型GPUしか持ち得ないマシン上のVulkan等) CPU限定推論, あるいは任意レイヤー数の部分的オフロードのために `BONSAI_NGL=0` をセットせよ (PowerShellなら: `$env:BONSAI_NGL = "0"`).
+このスクリプトは、あなたのGPU (Metal, CUDA, ROCm, Vulkan) を自動検出し、かつ全レイヤーをオフロードする。もし検出器が選び抜いたGPUが気に食わないのなら (例えば弱っちい統合型GPUしか持ち得ないマシン上のVulkan等) CPU限定推論, あるいは任意レイヤー数の部分的オフロードのために `BONSAI_NGL=0` をセットせよ (PowerShellなら: `$env:BONSAI_NGL = "0"`).
 
 #### Thinking
 
