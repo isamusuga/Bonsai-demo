@@ -299,9 +299,9 @@ Windows PowerShell 向け:
 
 #### Thinking
 
-The 27B is a thinking model and serves with thinking **enabled**. To adjust it per conversation in the chat UI (no restart): click the lightbulb in the message box and pick a **Reasoning effort**: Off, Low (512 tokens), Medium (2,048), High (8,192), or Max (unlimited). The pick persists per browser and is sent with every request.
+27Bは thinking モデルであり、初期から thinking を**有効化**した状態でサービスする. チャットUI内の会話毎にそれを調整するには (再起動する事なしに): メッセージ・ボックス内の電球アイコンをクリックし、**Reasoningの努力レベル**を以下から選び出す: Off, Low (512 トークン), Medium (2,048〃), High (8,192〃), もしくは Max (無制限). その選択はブラウザ毎に保持され、以降全リクエストにつき送信される.
 
-On slower hardware, thinking is usually the bulk of the wait; pick a lower effort in the UI. For API clients that don't specify a reasoning effort, you can cap the server-wide default by passing llama-server flags straight through the start script:
+より低速なハードウェアでは, thinking は通常、待機が大半であり; この場合はUIでより低努力なレベルを選び出す. reasoning 努力レベルを指定しない API クライアントについては, 起動スクリプトを通じてllama-serverフラグを直にバイパス＆パススルーする事でサーバ-ワイドな既定値にキャップをかけられる:
 
 ```bash
 ./scripts/start_llama_server.sh --reasoning-budget 2048
